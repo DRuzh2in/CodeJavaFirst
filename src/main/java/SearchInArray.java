@@ -17,4 +17,17 @@ public class SearchInArray {
         }
         return returnMax;
     }
+
+    public static int binarySearch(int[] arrayInt, int left, int right, int search){
+        int mid;
+        if (left > right)
+            return -1;
+        mid = (left + right)/2;
+        if (arrayInt[mid] == search)
+            return mid;
+        if (search < arrayInt[mid])
+            return binarySearch(arrayInt, left , mid-1, search);
+        else
+            return binarySearch(arrayInt, mid, right-1, search);
+    }
 }
