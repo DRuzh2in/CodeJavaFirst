@@ -1,10 +1,17 @@
 public class Main {
 
     public static void main(String[] args) {
-        int[] arr = {55, -2, 5, 157, 10};
-        int max = findArr(arr);
-        System.out.println("Arr[max] = " + max);
 
+        int sizeArray = 100;
+        int min = 0; // min digit in array
+        int max = 100; // max digit in array
+        int [] dataArray = GetArray.getRandomArray(min, max, sizeArray); // get random Array
+
+        AnyPrint.printArray(dataArray, sizeArray);
+
+        int maxInArr = SearchInArray.serchMax(dataArray, sizeArray);
+        System.out.println(maxInArr);
+/*
         sortAtoZ(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
@@ -16,15 +23,7 @@ public class Main {
 
     }
 
-    public static int findArr(int[] brr) {
-        int max = Integer.MIN_VALUE;
-        for (int i = 0; i < brr.length; i++) {
-            if (max < brr[i]) {
-                max = brr[i];
-            }
-        }
-        return max;
-    }
+
 
     public static void sortAtoZ(int[] arr) {
         {
@@ -60,5 +59,19 @@ public class Main {
                 }
             }
         }
+    }
+    public static void sieve(int [] arr){
+        for (int i=1;i<5;i++)
+        {
+            int Num;
+            Num = arr[i]/2;
+            if(Num == 0){
+                break;
+            }
+            Num = arr[i]%2;
+            if(Num == 1){
+                System.out.println(Num);
+            }
+        }*/
     }
 }
