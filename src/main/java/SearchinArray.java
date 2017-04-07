@@ -1,9 +1,10 @@
 /**
  * Created by vdruzhinin on 4/6/2017.
- * Search maximum in array
+ * Search elements in array
  */
-public class SearchInArray {
+public class SearchinArray {
 
+    /***Search maximum in array***/
     public static int serchMax(int[] arrayInt, int sizeArr) {
         int returnMax = 0;
         for (int i = 0; i < sizeArr; i++) {
@@ -18,16 +19,17 @@ public class SearchInArray {
         return returnMax;
     }
 
+    /***Binary search***/
     public static int binarySearch(int[] arrayInt, int left, int right, int search){
-        int mid;
+        int middle;
         if (left > right)
             return -1;
-        mid = (left + right)/2;
-        if (arrayInt[mid] == search)
-            return mid;
-        if (search < arrayInt[mid])
-            return binarySearch(arrayInt, left , mid-1, search);
+        middle = (left + right)/2;
+        if (arrayInt[middle] == search)
+            return middle;
+        if (search < arrayInt[middle])
+            return binarySearch(arrayInt, left , middle-1, search);
         else
-            return binarySearch(arrayInt, mid, right-1, search);
+            return binarySearch(arrayInt, middle, right+1, search);
     }
 }
