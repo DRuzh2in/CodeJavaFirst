@@ -1,9 +1,11 @@
-/**
- * Created by vdruzhinin on 4/6/2017. Search elements in array
- */
-public class SearchinArray {
+package serch;
 
-    //Search maximum in array
+/**
+ * Created by vdruzhinin on 4/6/2017. Search elements in Array
+ */
+public class Array {
+
+    //Search maximum in Array
     public static int serchMax(int[] arrayInt, int sizeArr) {
         int returnMax = 0;
         for (int i = 0; i < sizeArr; i++) {
@@ -28,6 +30,7 @@ public class SearchinArray {
         if (arrayInt[middle] == search) {
             return middle;
         }
+
         if (search < arrayInt[middle]) {
             return binarySearch(arrayInt, left, middle - 1, search);
         } else

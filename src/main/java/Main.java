@@ -1,17 +1,19 @@
+import serch.Array;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        int sizeArray = 100; // size elements in array
+        int sizeArray = 100; // size elements in Array
         int[] dataArray;
         int task = 6; //
         switch (task) {
-            //Search maximum in array
+            //Search maximum in Array
             case 1:
                 dataArray = GetArray.getRandomArray(sizeArray); // get random Array
                 AnyPrint.printArray(dataArray, sizeArray, 1);
-                int maxInArr = SearchinArray.serchMax(dataArray, sizeArray); // max in Arr
-                System.out.format("\nMax in array: %d\n", maxInArr);
+                int maxInArr = Array.serchMax(dataArray, sizeArray); // max in Arr
+                System.out.format("\nMax in Array: %d\n", maxInArr);
                 break;
             //Sort
             case 2:
@@ -42,12 +44,14 @@ public class Main {
                 break;
             //Нахождение числа фибоначи
             case 6:
-                dataArray = GetArray.getRandomArray(sizeArray);
-                dataArray = SortArray.InsertSort(dataArray, sizeArray);
-                AnyPrint.printArray(dataArray, sizeArray, 1);
-                int left = 0, right = 100, searchInt = 7;
-                int elementArr = SearchinArray.binarySearch(dataArray, left, right, searchInt); // binary search
-                if (elementArr == -1) System.out.format("Could not find item: %d in array\n", searchInt);
+                dataArray = new int[]{1,2,3,4,5,7};
+                //dataArray = GetArray.getRandomArray(sizeArray);
+                //dataArray = sort.Insert.InsertSort(dataArray, sizeArray);
+                AnyPrint.printArray(dataArray, dataArray.length, 1);
+                int left = 0, right = dataArray.length, searchInt = 6;
+                int elementArr = Array.binarySearch(dataArray, left, right, searchInt); // binary search
+                System.out.format("\n%d\n", elementArr);
+                if (elementArr == -1) System.out.format("Could not find item: %d in Array\n", searchInt);
                 else System.out.format("\nArr[%d] = %d\n", elementArr, searchInt);
                 break;
 

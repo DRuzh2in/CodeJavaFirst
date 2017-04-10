@@ -4,7 +4,7 @@
  */
 public class AnyPrint {
 
-    //Print array
+    //Print Array
     public static void printArray(int[] arrayInt, int sizeArray, int key) {
         System.out.print("Array:\n");
         for (int i = 0; i < sizeArray; i++) {

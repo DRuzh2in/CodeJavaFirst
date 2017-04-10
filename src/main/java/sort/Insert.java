@@ -1,7 +1,9 @@
+package sort;
+
 /**
  * Created by vdruzhinin on 4/7/2017.
  */
-public class SortArray {
+public class Insert {
 
     //Insertion sort
     public static int[] InsertSort(int[] arrayInt, int sizeArr) {
@@ -20,5 +22,4 @@ public class SortArray {
         }
         return arrayInt;
     }
-
 }
