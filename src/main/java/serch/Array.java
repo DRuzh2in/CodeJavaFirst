@@ -23,7 +23,7 @@ public class Array {
     //Binary search
     public static int binarySearch(int[] arrayInt, int left, int right, int search) {
         int middle;
-        if (left > right) {
+        if (left >= right) {
             return -1;
         }
         middle = (left + right) / 2;
@@ -32,8 +32,8 @@ public class Array {
         }
 
         if (search < arrayInt[middle]) {
-            return binarySearch(arrayInt, left, middle - 1, search);
+            return binarySearch(arrayInt, left, middle -1, search);
         } else
-            return binarySearch(arrayInt, middle, right + 1, search);
+            return binarySearch(arrayInt, middle, right +1, search);
     }
 }
