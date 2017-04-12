@@ -1,12 +1,15 @@
 import serch.Array;
+import string.RevertString;
+
+import java.util.Arrays;
 
 public class Main {
-
+    static int task = 1; //
     public static void main(String[] args) {
 
         int sizeArray = 100; // size elements in Array
         int[] dataArray;
-        int task = 6; //
+
         switch (task) {
             //Search maximum in Array
             case 1:
@@ -61,6 +64,12 @@ public class Main {
                  * вывести на консоль все числа из промежутка 1...n включительно, которые делятся без остатка на m,
                  * где n и m - входные аргументы
                  */
+                break;
+            //переворот строки
+            case 8:
+                String str = "qwerty";
+                String string = RevertString.revert(str);
+                System.out.println(string);
                 break;
             default:
                 System.out.format("WTF, where Task!!!\n");
