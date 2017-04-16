@@ -1,3 +1,5 @@
+package array;
+
 import java.util.Random;
 
 /**
@@ -13,9 +15,7 @@ public class GetArray {
     }
 
     //Array with random digits
-    public static int[] getRandomArray(int sizeArray) {
-        int min = 0; // min digit in Array
-        int max = 10; // max digit in Array
+    public static int[] getRandomArray(int sizeArray, int min, int max) {
         int[] randomArray = new int[sizeArray];
         for (int i = 0; i < sizeArray; i++) {
             randomArray[i] = randomiser(min, max);
