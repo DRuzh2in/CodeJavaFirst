@@ -13,18 +13,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int sizeArray = 100; // size elements in Array
+        int sizeArray = 100; // size elements in MergArray
         int[] dataArray;
-        int min = 0; // min digit in Array
-        int max = 100; // max digit in Array
+        int min = 0; // min digit in MergArray
+        int max = 100; // max digit in MergArray
 
         switch (task) {
-            //Search maximum in Array
+            //Search maximum in MergArray
             case 1:
-                dataArray = GetArray.getRandomArray(sizeArray, min, max); // get random Array
+                dataArray = GetArray.getRandomArray(sizeArray, min, max); // get random MergArray
                 AnyPrint.printArray(dataArray, sizeArray, 1);
                 int maxInArr = Array.serchMax(dataArray, sizeArray); // max in Arr
-                System.out.format("\nMax in Array: %d\n", maxInArr);
+                System.out.format("\nMax in MergArray: %d\n", maxInArr);
                 break;
             //Sort
             case 2:
@@ -62,7 +62,7 @@ public class Main {
                 int left = 0, right = dataArray.length, searchInt = 6;
                 int elementArr = Array.binarySearch(dataArray, left, right, searchInt); // binary search
                 System.out.format("\n%d\n", elementArr);
-                if (elementArr == -1) System.out.format("Could not find item: %d in Array\n", searchInt);
+                if (elementArr == -1) System.out.format("Could not find item: %d in MergArray\n", searchInt);
                 else System.out.format("\nArr[%d] = %d\n", elementArr, searchInt);
                 break;
 

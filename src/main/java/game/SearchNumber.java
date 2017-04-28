@@ -21,7 +21,7 @@ public class SearchNumber {
             System.out.println("Ваше число: " + findNum);
         } else {
             System.out.println("Это число больше " + findNum + " ?");
-            key = scanner.nextBoolean();
+            key = scanner.nextBoolean( );
             if (key) {
                 min = findNum;
                 gameNumber(min, max);

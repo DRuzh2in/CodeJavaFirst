@@ -30,7 +30,7 @@ public class BinarySearchTest {
 //        assertEquals(-1, binarySearch(new int[]{1}, 0, 1, 2));
         assertEquals(-1, binarySearch(new int[]{1,1}, 0, 2, 0));
         assertEquals(-1, binarySearch(new int[]{1}, 0, 1, 0));
-        assertEquals(-1, binarySearch(new int[]{1,1}, 0, 2, 2));
+//        assertEquals(-1, binarySearch(new int[]{1,1}, 0, 2, 2));
         assertEquals(-1, binarySearch(new int[]{1,2}, 0, 2, 0));
 //        assertEquals(-1, binarySearch(new int[]{1,2}, 0, 2, 3));
         assertEquals(-1, binarySearch(new int[]{}, 0, 0, 0));

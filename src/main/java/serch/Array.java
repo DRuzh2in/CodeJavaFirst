@@ -1,11 +1,11 @@
 package serch;
 
 /**
- * Created by vdruzhinin on 4/6/2017. Search elements in Array
+ * Created by vdruzhinin on 4/6/2017. Search elements in MergArray
  */
 public class Array {
 
-    //Search maximum in Array
+    //Search maximum in MergArray
     public static int serchMax(int[] arrayInt, int sizeArr) {
         int returnMax = 0;
         for (int i = 0; i < sizeArr; i++) {

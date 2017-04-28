@@ -14,7 +14,7 @@ public class GetArray {
         return (int) (Math.random() * ++max) + min;
     }
 
-    //Array with random digits
+    //MergArray with random digits
     public static int[] getRandomArray(int sizeArray, int min, int max) {
         int[] randomArray = new int[sizeArray];
         for (int i = 0; i < sizeArray; i++) {
@@ -23,7 +23,7 @@ public class GetArray {
         return randomArray;
     }
 
-    //Array sorted in ascending order
+    //MergArray sorted in ascending order
     public static int[] getSortArray(int sizeArray) {
         int[] sortArray = new int[sizeArray];
         for (int i = 0; i < sizeArray; i++)

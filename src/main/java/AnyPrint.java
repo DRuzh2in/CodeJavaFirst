@@ -4,9 +4,9 @@
  */
 public class AnyPrint {
 
-    //Print Array
+    //Print MergArray
     public static void printArray(int[] arrayInt, int sizeArray, int key) {
-        System.out.print("Array:\n");
+        System.out.print("MergArray:\n");
         for (int i = 0; i < sizeArray; i++) {
             switch (key) {
                 case 1:

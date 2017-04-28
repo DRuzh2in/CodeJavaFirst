@@ -13,5 +13,6 @@ public class StringBracketsTest {
         assertEquals(true, StringBrackets.correctBracketPosition("(qwerty)"));
         assertEquals(false, StringBrackets.correctBracketPosition("(qwerty))"));
         assertEquals(true, StringBrackets.correctBracketPosition("(qwe(rty))"));
+        assertEquals(false, StringBrackets.correctBracketPosition("(qw(e(rty))"));
     }
 }

@@ -3,9 +3,9 @@ package array;
 /**
  * Created by vdruzhinin on 4/13/2017.
  */
-public class Array {
+public class MergArray {
 
-    public static int[] mergArray(int[] arrayA, int[] arrayB) {
+    public static int[] merge(int[] arrayA, int[] arrayB) {
         int[] arrayC = new int[100];
         boolean flag = false;
 

@@ -5,17 +5,17 @@ package string;
  */
 public class StringBrackets {
     public static boolean correctBracketPosition (String str){
-        int leftBracket = 0;
-        for (char brace: str.toCharArray()){
-            if (brace == '('){
-                leftBracket++;
-            }else if(brace == ')'){
-                leftBracket--;
+        int bracket = 0;
+        for (char anyChar: str.toCharArray()){
+            if (anyChar == '('){
+                bracket++;
+            }else if(anyChar == ')'){
+                bracket--;
             }
-            if (leftBracket < 0){
+            if (bracket < 0){
                 return false;
             }
         }
-        return leftBracket == 0;
+        return bracket == 0;
     }
 }
