@@ -11,7 +11,7 @@ public class Circle {
     double y;
     double radius;
 
-    public Circle(int x, int y, int radius) {
+    public Circle(double x, double y, double radius) {
         this.x = x;
         this.y = y;
         this.radius = radius;

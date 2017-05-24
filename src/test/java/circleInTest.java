@@ -33,8 +33,8 @@ public class circleInTest {
         relation = inCircle(circle1, circle2);
         assertEquals(CONTAINS, relation);
 
-        circle1 = new Circle(5, 5, 2);
-        circle2 = new Circle(3, 3, 1);
+        circle1 = new Circle(3, 3, 2);
+        circle2 = new Circle(4, 2, 1);
         relation = inCircle(circle1, circle2);
         assertEquals(INTERSECTS, relation);
     }

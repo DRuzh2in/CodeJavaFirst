@@ -1,15 +1,18 @@
 import array.GetArray;
+import collections.MyLinkedList;
+import collections.MyList;
 import game.SearchNumber;
 import serch.Array;
 import string.RevertString;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
 
-
-    static int task = 2; //номер задания
+    static int task = 12; //номер задания
 
     public static void main(String[] args) {
 
@@ -55,7 +58,7 @@ public class Main {
                 break;
             //Нахождение числа фибоначи
             case 6:
-                dataArray = new int[]{1,2,3,4,5,7};
+                dataArray = new int[]{1, 2, 3, 4, 5, 7};
                 //dataArray = array.GetArray.getRandomArray(sizeArray);
                 //dataArray = sort.Insert.InsertSort(dataArray, sizeArray);
                 AnyPrint.printArray(dataArray, dataArray.length, 1);
@@ -88,6 +91,65 @@ public class Main {
                 System.out.println("Загадай число от " + min + " до " + max);
                 SearchNumber.gameNumber(min, max);
                 break;
+
+            case 10:
+                Scanner scan = new Scanner(System.in);
+                MyList[] list = new MyList[5];
+
+                for (int i = 0; i < list.length; i++) {
+                    MyList list2 = new MyList();
+                    System.out.println("Введите ваше имя (* не более 10 символов): ");
+                    list2.setName(scan.nextLine());
+                    System.out.println("Введите ваш возраст: ");
+                    list2.setAge(scan.nextInt());
+                    scan.nextLine();
+                    list[i] = list2;
+                }
+
+                System.out.println("Список: ");
+                System.out.printf("|%10s|%4s|\n", "Name", "Age");
+                System.out.println("-----------+-----");
+                for (int i = 0; i < list.length; i++) {
+                    System.out.printf("|%10s|%4d|\n", list[i].getName(), list[i].getAge());
+                }
+                System.out.println("-----------+-----");
+                break;
+
+            case 11:
+                Scanner sc = new Scanner(System.in);
+                List <MyList> men = new LinkedList();
+                for (int i = 0; i < 5; i++) {
+                    MyList list2 = new MyList();
+                    System.out.println("Введите ваше имя (* не более 10 символов): ");
+                    list2.setName(sc.nextLine());
+                    System.out.println("Введите ваш возраст: ");
+                    list2.setAge(sc.nextInt());
+                    sc.nextLine();
+                    men.add(list2);
+                }
+
+                System.out.println("Список: ");
+                System.out.printf("|%10s|%4s|\n", "Name", "Age");
+                System.out.println("-----------+-----");
+                for (int i = 0; i < 5; i++) {
+                    System.out.printf("|%10s|%4d|\n", men.get(i).getName(), men.get(i).getAge());
+                }
+                System.out.println("-----------+-----");
+                break;
+
+            case 12:
+                MyLinkedList<Integer> myList = new MyLinkedList<Integer>();
+                myList.add(1);
+                myList.add(15);
+                myList.add(28);
+                myList.add(0);
+                myList.add(100);
+
+                System.out.println(myList);
+                myList.add(666, 2);
+                System.out.println(myList);
+                break;
+
             default:
                 System.out.format("WTF, where Task!!!\n");
                 break;
